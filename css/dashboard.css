@@ -1,99 +1,146 @@
+/* ===== SIDEBAR ===== */
+
 .sidebar{
-    position:fixed;
-    top:0;
-    left:0;
-    width:250px;
-    height:100vh;
-    background:#111827;
-    padding:30px 20px;
-    border-right:1px solid rgba(255,255,255,.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: #111827;
+    padding: 30px 20px;
+    border-right: 1px solid rgba(255,255,255,.08);
 }
 
 .logo{
-    font-size:30px;
-    font-weight:700;
-    color:#ff3b3b;
-    margin-bottom:40px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff3b3b;
+    margin-bottom: 40px;
 }
 
 .sidebar ul{
-    list-style:none;
+    list-style: none;
 }
 
 .sidebar li{
-    padding:14px;
-    border-radius:12px;
-    margin-bottom:12px;
-    cursor:pointer;
-    transition:.3s;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .3s;
 }
 
 .sidebar li:hover{
-    background:#ff3b3b;
-    transform:translateX(5px);
+    background: #ff3b3b;
+    transform: translateX(5px);
 }
 
 .sidebar .active{
-    background:#ff3b3b;
+    background: #ff3b3b;
 }
 
+/* ===== CONTENT ===== */
+
 .content{
-    margin-left:270px;
-    padding:35px;
+    margin-left: 270px;
+    padding: 35px;
 }
 
 .topbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .topbar h1{
-    font-size:35px;
+    font-size: 32px;
+    font-weight: 600;
 }
 
 .topbar button{
-    background:#ff3b3b;
-    color:white;
-    border:none;
-    padding:12px 22px;
-    border-radius:10px;
-    cursor:pointer;
-    transition:.3s;
+    background: #ff3b3b;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
 }
 
 .topbar button:hover{
-    transform:scale(1.05);
+    background: #ff5555;
 }
 
+/* ===== CARDS ===== */
+
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 20px;
 }
 
 .card{
-    background:#1e293b;
-    border-radius:18px;
-    padding:25px;
-    transition:.3s;
-    border:1px solid rgba(255,255,255,.05);
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,.05);
+    transition: .3s;
 }
 
 .card:hover{
-    transform:translateY(-6px);
-    border-color:#ff3b3b;
+    transform: translateY(-5px);
+    border-color: #ff3b3b;
 }
 
 .card h3{
-    font-size:18px;
-    margin-bottom:15px;
-    color:#ccc;
+    font-size: 17px;
+    color: #d1d5db;
+    margin-bottom: 15px;
 }
 
 .card span{
-    font-size:26px;
-    color:#ff3b3b;
-    font-weight:bold;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff3b3b;
+}
+
+/* ===== FORM ===== */
+
+label{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input,
+select{
+    width: 100%;
+    padding: 13px 15px;
+    background: #0f172a;
+    color: white;
+    border: 1px solid #374151;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+input:focus,
+select:focus{
+    border-color: #ff3b3b;
+}
+
+button{
+    background: #ff3b3b;
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover{
+    background: #ff5555;
 }
