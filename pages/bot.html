@@ -1,62 +1,77 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bot Manager</title>
+    <title>Astrava Panel • Bot Manager</title>
 
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/dashboard.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="content">
+    <!-- Sidebar -->
 
-<h1>🤖 Bot Manager</h1>
+    <aside class="sidebar">
 
-<div class="card">
+        <div class="logo">
+            ASTRAVA
+        </div>
 
-<label>Nama Bot</label>
-<input type="text" id="botName" placeholder="Astrava Bot">
+        <ul>
 
-<label>Prefix</label>
-<input type="text" id="prefix" placeholder=".">
+            <li onclick="location.href='dashboard.html'">
+                🏠 Dashboard
+            </li>
 
-<label>Mode Bot</label>
+            <li class="active">
+                🤖 Bot Manager
+            </li>
 
-<select id="mode">
+            <li>
+                👤 Owner
+            </li>
 
-<option>Public</option>
+            <li>
+                👥 Users
+            </li>
 
-<option>Self</option>
+            <li>
+                💬 Messages
+            </li>
 
-</select>
+            <li>
+                📦 Database
+            </li>
 
-<label>Auto Read</label>
+            <li>
+                📜 Activity
+            </li>
 
-<select id="autoread">
+            <li>
+                ⚙️ Settings
+            </li>
 
-<option>ON</option>
+        </ul>
 
-<option>OFF</option>
+    </aside>
 
-</select>
+    <!-- Content -->
 
-<button onclick="saveBot()">
+    <main class="content">
 
-Simpan
+        <header class="topbar">
 
-</button>
+            <div>
 
-</div>
+                <h1>Bot Manager</h1>
 
-</div>
-
-<script src="../js/bot.js"></script>
-
-</body>
-</html>
+                <p>Kelola peng
