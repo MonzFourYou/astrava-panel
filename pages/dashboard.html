@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Astrava Dashboard</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/dashboard.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="sidebar">
+
+    <h2>ASTRAVA</h2>
+
+    <ul>
+
+        <li class="active">🏠 Dashboard</li>
+        <li>🤖 Bot Manager</li>
+        <li>👤 Owner</li>
+        <li>👥 Users</li>
+        <li>💬 Messages</li>
+        <li>📦 Database</li>
+        <li>⚙️ Settings</li>
+
+    </ul>
+
+</div>
+
+<div class="content">
+
+    <div class="topbar">
+
+        <h1>Dashboard</h1>
+
+        <button onclick="logout()">
+            Logout
+        </button>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Bot Status</h3>
+            <span>🟢 Online</span>
+        </div>
+
+        <div class="card">
+            <h3>Users</h3>
+            <span>0</span>
+        </div>
+
+        <div class="card">
+            <h3>Version</h3>
+            <span>v1.0.0</span>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../js/app.js"></script>
+
+</body>
+</html>
