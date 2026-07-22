@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Bot Manager</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/dashboard.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="content">
+
+<h1>🤖 Bot Manager</h1>
+
+<div class="card">
+
+<label>Nama Bot</label>
+<input type="text" id="botName" placeholder="Astrava Bot">
+
+<label>Prefix</label>
+<input type="text" id="prefix" placeholder=".">
+
+<label>Mode Bot</label>
+
+<select id="mode">
+
+<option>Public</option>
+
+<option>Self</option>
+
+</select>
+
+<label>Auto Read</label>
+
+<select id="autoread">
+
+<option>ON</option>
+
+<option>OFF</option>
+
+</select>
+
+<button onclick="saveBot()">
+
+Simpan
+
+</button>
+
+</div>
+
+</div>
+
+<script src="../js/bot.js"></script>
+
+</body>
+</html>
