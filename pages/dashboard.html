@@ -1,91 +1,135 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astrava Panel</title>
 
+    <title>Astrava Panel • Dashboard</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="stylesheet" href="../css/sidebar.css">
     <link rel="stylesheet" href="../css/responsive.css">
 
+    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="sidebar">
+    <!-- ===== Sidebar ===== -->
 
-    <div class="logo">
-        ASTRAVA
-    </div>
+    <aside class="sidebar">
 
-    <ul>
-
-        <li class="menu-item active">🏠 Dashboard</li>
-        <li class="menu-item">🤖 Bot Manager</li>
-        <li class="menu-item">👤 Owner</li>
-        <li class="menu-item">👥 Users</li>
-        <li class="menu-item">💬 Messages</li>
-        <li class="menu-item">📦 Database</li>
-        <li class="menu-item">📜 Activity</li>
-        <li class="menu-item">⚙️ Settings</li>
-
-    </ul>
-
-</div>
-
-<div class="content">
-
-    <div class="topbar">
-
-        <h1>Dashboard</h1>
-
-        <button onclick="logout()">
-            Logout
-        </button>
-
-    </div>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>🤖 Bot Status</h3>
-            <span>Online</span>
+        <div class="logo">
+            ASTRAVA
         </div>
 
-        <div class="card">
-            <h3>👤 Owner</h3>
-            <span>Monz</span>
-        </div>
+        <ul>
 
-        <div class="card">
-            <h3>👥 Users</h3>
-            <span>0</span>
-        </div>
+            <li class="active">
+                🏠 Dashboard
+            </li>
 
-        <div class="card">
-            <h3>📦 Database</h3>
-            <span>Disconnected</span>
-        </div>
+            <li>
+                🤖 Bot Manager
+            </li>
 
-        <div class="card">
-            <h3>⚡ Version</h3>
-            <span>v1.0.0</span>
-        </div>
+            <li>
+                👤 Owner
+            </li>
 
-        <div class="card">
-            <h3>💻 Server</h3>
-            <span>Cloudflare</span>
-        </div>
+            <li>
+                👥 Users
+            </li>
 
-    </div>
+            <li>
+                💬 Messages
+            </li>
 
-</div>
+            <li>
+                📦 Database
+            </li>
 
-<script src="../js/app.js"></script>
-<script src="../js/router.js"></script>
+            <li>
+                📜 Activity
+            </li>
 
-</body>
-</html>
+            <li>
+                ⚙️ Settings
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ===== Main ===== -->
+
+    <main class="content">
+
+        <!-- Topbar -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Dashboard</h1>
+
+                <p>Welcome back, Administrator 👋</p>
+
+            </div>
+
+            <button onclick="logout()">
+
+                Logout
+
+            </button>
+
+        </header>
+
+        <!-- Statistik -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <h3>🤖 Bot Status</h3>
+
+                <span>Online</span>
+
+            </div>
+
+            <div class="card">
+
+                <h3>👤 Owner</h3>
+
+                <span>Monz</span>
+
+            </div>
+
+            <div class="card">
+
+                <h3>👥 Total Users</h3>
+
+                <span>0</span>
+
+            </div>
+
+            <div class="card">
+
+                <h3>📦 Database</h3>
+
+                <span>Disconnected</span>
+
+            </div>
+
+            <div class="card">
+
+                <h3>⚡ Version</h3>
+
+                <span>v1.0.0</span>
+
+            </div>
+
+            <
