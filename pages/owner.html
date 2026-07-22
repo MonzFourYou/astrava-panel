@@ -1,1 +1,123 @@
 
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Astrava Panel • Owner</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            ASTRAVA
+        </div>
+
+        <ul>
+
+            <li onclick="location.href='dashboard.html'">
+                🏠 Dashboard
+            </li>
+
+            <li onclick="location.href='bot.html'">
+                🤖 Bot Manager
+            </li>
+
+            <li class="active">
+                👤 Owner
+            </li>
+
+            <li>
+                👥 Users
+            </li>
+
+            <li>
+                💬 Messages
+            </li>
+
+            <li>
+                📦 Database
+            </li>
+
+            <li>
+                📜 Activity
+            </li>
+
+            <li>
+                ⚙️ Settings
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="content">
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Owner Manager</h1>
+
+                <p>Kelola data Owner Bot.</p>
+
+            </div>
+
+            <button onclick="location.href='dashboard.html'">
+
+                Dashboard
+
+            </button>
+
+        </header>
+
+        <div class="card">
+
+            <label>Nama Owner</label>
+            <input type="text" id="ownerName" placeholder="Monz">
+
+            <label>Nomor WhatsApp</label>
+            <input type="text" id="ownerNumber" placeholder="628xxxxxxxxxx">
+
+            <label>Instagram</label>
+            <input type="text" id="instagram" placeholder="@username">
+
+            <label>YouTube</label>
+            <input type="text" id="youtube" placeholder="https://youtube.com">
+
+            <label>Website</label>
+            <input type="text" id="website" placeholder="https://example.com">
+
+            <button onclick="saveOwner()">
+
+                💾 Simpan Data
+
+            </button>
+
+        </div>
+
+    </main>
+
+    <script src="../js/owner.js"></script>
+
+</body>
+
+</html>
