@@ -1,1 +1,47 @@
 
+@media(max-width:900px){
+
+.sidebar{
+
+width:80px;
+
+}
+
+.sidebar h2{
+
+display:none;
+
+}
+
+.sidebar li{
+
+font-size:13px;
+
+padding:12px;
+
+}
+
+.content{
+
+margin-left:90px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.topbar{
+
+flex-direction:column;
+gap:20px;
+
+}
+
+}
