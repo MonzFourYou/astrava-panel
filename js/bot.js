@@ -73,4 +73,4 @@ function loadBot() {
 // Auto Load
 // ===============================
 
-window.onload = loadBot; 
+window.onload = loadBot;
