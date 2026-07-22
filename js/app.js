@@ -1,7 +1,9 @@
 function logout(){
 
-    alert("Logout Berhasil");
+    if(confirm("Yakin ingin logout?")){
 
-    window.location.href="../index.html";
+        window.location.href="../index.html";
+
+    }
 
 }
