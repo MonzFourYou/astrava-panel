@@ -1,123 +1,68 @@
+/**
+ * ==========================================
+ * Astrava Panel
+ * Owner Manager
+ * Version : 1.0.0-beta
+ * ==========================================
+ */
 
-<!DOCTYPE html>
-<html lang="id">
+import { supabase } from "../config/supabase.js";
 
-<head>
+// ===============================
+// Elements
+// ===============================
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+const btnSave = document.getElementById("saveOwner");
 
-    <title>Astrava Panel • Owner</title>
+const ownerName = document.getElementById("ownerName");
+const ownerNumber = document.getElementById("ownerNumber");
+const instagram = document.getElementById("instagram");
+const youtube = document.getElementById("youtube");
+const website = document.getElementById("website");
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="stylesheet" href="../css/responsive.css">
+// ===============================
+// Load Owner
+// ===============================
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+async function loadOwner() {
 
-</head>
+    const { data, error } = await supabase
+        .from("owner")
+        .select("*")
+        .limit(1)
+        .maybeSingle();
 
-<body>
+    if (error) {
+        console.error(error.message);
+        return;
+    }
 
-    <!-- Sidebar -->
+    if (!data) return;
 
-    <aside class="sidebar">
+    ownerName.value = data.owner_name ?? "";
+    ownerNumber.value = data.owner_number ?? "";
+    instagram.value = data.instagram ?? "";
+    youtube.value = data.youtube ?? "";
+    website.value = data.website ?? "";
+}
 
-        <div class="logo">
-            ASTRAVA
-        </div>
+// ===============================
+// Save Owner
+// ===============================
 
-        <ul>
+async function saveOwner() {
 
-            <li onclick="location.href='dashboard.html'">
-                🏠 Dashboard
-            </li>
+    if (
+        ownerName.value.trim() === "" ||
+        ownerNumber.value.trim() === ""
+    ) {
+        alert("Nama Owner dan Nomor WhatsApp wajib diisi.");
+        return;
+    }
 
-            <li onclick="location.href='bot.html'">
-                🤖 Bot Manager
-            </li>
+    btnSave.disabled = true;
+    btnSave.textContent = "Menyimpan...";
 
-            <li class="active">
-                👤 Owner
-            </li>
+    try {
 
-            <li>
-                👥 Users
-            </li>
-
-            <li>
-                💬 Messages
-            </li>
-
-            <li>
-                📦 Database
-            </li>
-
-            <li>
-                📜 Activity
-            </li>
-
-            <li>
-                ⚙️ Settings
-            </li>
-
-        </ul>
-
-    </aside>
-
-    <!-- Main -->
-
-    <main class="content">
-
-        <header class="topbar">
-
-            <div>
-
-                <h1>Owner Manager</h1>
-
-                <p>Kelola data Owner Bot.</p>
-
-            </div>
-
-            <button onclick="location.href='dashboard.html'">
-
-                Dashboard
-
-            </button>
-
-        </header>
-
-        <div class="card">
-
-            <label>Nama Owner</label>
-            <input type="text" id="ownerName" placeholder="Monz">
-
-            <label>Nomor WhatsApp</label>
-            <input type="text" id="ownerNumber" placeholder="628xxxxxxxxxx">
-
-            <label>Instagram</label>
-            <input type="text" id="instagram" placeholder="@username">
-
-            <label>YouTube</label>
-            <input type="text" id="youtube" placeholder="https://youtube.com">
-
-            <label>Website</label>
-            <input type="text" id="website" placeholder="https://example.com">
-
-            <button onclick="saveOwner()">
-
-                💾 Simpan Data
-
-            </button>
-
-        </div>
-
-    </main>
-
-    <script src="../js/owner.js"></script>
-
-</body>
-
-</html>
+        const {
