@@ -1,74 +1,95 @@
-/*
-====================================
- Astrava Panel
- app.js
-====================================
-*/
+/**
+ * ==========================================
+ * Astrava Panel
+ * File      : app.js
+ * Version   : 1.0.0
+ * Author    : MonzFourYou
+ * ==========================================
+ */
 
-// ================================
-// Logout
-// ================================
+// ==========================================
+// Toast Notification
+// ==========================================
 
-function logout() {
+export function showToast(message, type = "success") {
 
-    const confirmLogout = confirm("Yakin ingin logout?");
+    let toast = document.getElementById("astrava-toast");
 
-    if (confirmLogout) {
-        window.location.href = "../index.html";
+    if (!toast) {
+
+        toast = document.createElement("div");
+        toast.id = "astrava-toast";
+        document.body.appendChild(toast);
+
+    }
+
+    toast.className = `toast ${type}`;
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+
+        toast.classList.remove("show");
+
+    }, 3000);
+
+}
+
+// ==========================================
+// Loading Button
+// ==========================================
+
+export function buttonLoading(button, text = "Loading...") {
+
+    button.dataset.originalText = button.innerHTML;
+    button.disabled = true;
+    button.innerHTML = text;
+
+}
+
+export function buttonReset(button) {
+
+    button.disabled = false;
+
+    if (button.dataset.originalText) {
+
+        button.innerHTML = button.dataset.originalText;
+
     }
 
 }
 
-// ================================
-// Card Hover Animation
-// ================================
+// ==========================================
+// Confirm Dialog
+// ==========================================
 
-const cards = document.querySelectorAll(".card");
+export function confirmAction(message) {
 
-cards.forEach((card) => {
-
-    card.addEventListener("mouseenter", () => {
-
-        card.style.transform = "translateY(-6px)";
-
-    });
-
-    card.addEventListener("mouseleave", () => {
-
-        card.style.transform = "translateY(0px)";
-
-    });
-
-});
-
-// ================================
-// Greeting
-// ================================
-
-const hour = new Date().getHours();
-
-let greeting = "Welcome";
-
-if (hour < 12) {
-
-    greeting = "🌤 Good Morning";
-
-} else if (hour < 18) {
-
-    greeting = "☀ Good Afternoon";
-
-} else {
-
-    greeting = "🌙 Good Evening";
+    return confirm(message);
 
 }
 
-console.log(greeting + " Administrator");
+// ==========================================
+// Validator
+// ==========================================
 
-// ================================
-// Version
-// ================================
+export function isEmpty(value) {
 
-const PANEL_VERSION = "1.0.0";
+    return value.trim() === "";
 
-console.log("Astrava Panel v" + PANEL_VERSION);
+}
+
+export function isPhone(number) {
+
+    return /^62[0-9]{8,15}$/.test(number);
+
+}
+
+export function isUrl(url) {
+
+    if (url.trim() === "") return true;
+
+    try {
+
+       
