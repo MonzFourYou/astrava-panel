@@ -2,134 +2,111 @@
 <html lang="id">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Astrava Panel • Dashboard</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/responsive.css">
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <!-- ===== Sidebar ===== -->
+<aside class="sidebar">
 
-    <aside class="sidebar">
+    <div class="logo">
+        ASTRAVA
+    </div>
 
-        <div class="logo">
-            ASTRAVA
-        </div>
+    <ul>
 
-        <ul>
+        <li class="active" onclick="location.href='dashboard.html'">🏠 Dashboard</li>
 
-            <li class="active">
-                🏠 Dashboard
-            </li>
+        <li onclick="location.href='bot.html'">🤖 Bot Manager</li>
 
-            <li>
-                🤖 Bot Manager
-            </li>
+        <li onclick="location.href='owner.html'">👤 Owner</li>
 
-            <li>
-                👤 Owner
-            </li>
+        <li onclick="location.href='users.html'">👥 Users</li>
 
-            <li>
-                👥 Users
-            </li>
+        <li onclick="location.href='activity.html'">📜 Activity</li>
 
-            <li>
-                💬 Messages
-            </li>
+        <li onclick="location.href='settings.html'">⚙️ Settings</li>
 
-            <li>
-                📦 Database
-            </li>
+    </ul>
 
-            <li>
-                📜 Activity
-            </li>
+</aside>
 
-            <li>
-                ⚙️ Settings
-            </li>
+<main class="content">
 
-        </ul>
+<header class="topbar">
 
-    </aside>
+<div>
 
-    <!-- ===== Main ===== -->
+<h1>Dashboard</h1>
 
-    <main class="content">
+<p>Welcome to Astrava Panel</p>
 
-        <!-- Topbar -->
+</div>
 
-        <header class="topbar">
+</header>
 
-            <div>
+<div class="dashboard-grid">
 
-                <h1>Dashboard</h1>
+<div class="card">
 
-                <p>Welcome back, Administrator 👋</p>
+<h3>🤖 Total Bot</h3>
 
-            </div>
+<h1 id="totalBot">0</h1>
 
-            <button onclick="logout()">
+</div>
 
-                Logout
+<div class="card">
 
-            </button>
+<h3>👤 Owner</h3>
 
-        </header>
+<h1 id="ownerName">-</h1>
 
-        <!-- Statistik -->
+</div>
 
-        <section class="cards">
+<div class="card">
 
-            <div class="card">
+<h3>👥 Users</h3>
 
-                <h3>🤖 Bot Status</h3>
+<h1 id="totalUsers">0</h1>
 
-                <span>Online</span>
+</div>
 
-            </div>
+<div class="card">
 
-            <div class="card">
+<h3>📜 Activity</h3>
 
-                <h3>👤 Owner</h3>
+<h1 id="totalActivity">0</h1>
 
-                <span>Monz</span>
+</div>
 
-            </div>
+</div>
 
-            <div class="card">
+<div class="card">
 
-                <h3>👥 Total Users</h3>
+<h2>Status Database</h2>
 
-                <span>0</span>
+<p id="dbStatus">
 
-            </div>
+Checking...
 
-            <div class="card">
+</p>
 
-                <h3>📦 Database</h3>
+</div>
 
-                <span>Disconnected</span>
+</main>
 
-            </div>
+<script type="module" src="../js/dashboard.js"></script>
 
-            <div class="card">
-
-                <h3>⚡ Version</h3>
-
-                <span>v1.0.0</span>
-
-            </div>
-
-            <
+</body>
+</html>
